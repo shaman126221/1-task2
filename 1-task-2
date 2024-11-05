@@ -1,0 +1,15 @@
+def rightmost_digit(num):
+    """
+    Returns the binary representation of the rightmost digit of the given integer.
+    
+    Parameters:
+    num (int): An integer in the range [0, 100000].
+    
+    Returns:
+    str: The binary representation of the rightmost digit of the given integer.
+    """
+    if num < 0 or num > 100000:
+        raise ValueError("Input must be an integer in the range [0, 100000].")
+    
+    rightmost_digit = num % 10
+    return bin(rightmost_digit)[2:]
